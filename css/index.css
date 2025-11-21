@@ -14,7 +14,7 @@
     font-family: 'Quicksand';
 }
 
-body {
+.body {
     padding: 10%;
     background-color: #0d1117;
 }
@@ -42,7 +42,7 @@ body {
 }
 
 
-.div1 i{
+.div1 i {
     margin-right: .3%;
 }
 
@@ -60,7 +60,130 @@ body {
 }
 
 .titulo .div3 {
+    display: grid;
+    height: auto;
     grid-area: 'a3';
+    grid-template-columns: repeat(4, 1fr);
     border: solid 2px #3d444d;
-    padding: 1%;
+    padding: 2% 1%;
+    gap: 1%;
 }
+
+.div3 .a1 {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 4% 3%;
+    border: solid 2px #3d444d;
+    border-radius: 8px;
+    transition: 0.4s;
+}
+
+.a1 i {
+    font-size: 25px;
+    margin-right: 2%;
+}
+
+.div3 .a1:hover {
+    color: #0d1117;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.div3 .a2 {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 4% 3%;
+    border: solid 2px #3d444d;
+    border-radius: 8px;
+    transition: 0.4s;
+}
+
+.a2 i {
+    font-size: 24px;
+    margin-right: 2%;
+}
+
+.div3 .a2:hover {
+    color: #0d1117;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.div3 .a3 {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 4% 3%;
+    border: solid 2px #3d444d;
+    border-radius: 8px;
+    transition: 0.4s;
+}
+
+.a3 i {
+    font-size: 24px;
+    margin-right: 2%;
+}
+
+.div3 .a3:hover {
+    color: #0d1117;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+@media (max-width: 1024px) {
+    .body {
+        padding: 4%;
+    }
+
+    .titulo .div2 {
+        padding: 10%;
+    }
+
+    .titulo .div2 p {
+        font-size: 80px;
+        text-align: center;
+    }
+
+    .titulo .div3 {
+        padding: 3%;
+        height: auto;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    .titulo .div3 .a1 {
+        width: 100%;
+        grid-area: 'b1';
+        font-size: 35px;
+    }
+
+    .titulo .div3 .a1 i {
+        font-size: 40px;
+    }
+
+    .titulo .div3 .a2 {
+        width: 100%;
+        grid-area: 'b1';
+        font-size: 35px;
+    }
+
+    .titulo .div3 .a2 i {
+        font-size: 40px;
+    }
+
+    .titulo .div3 .a3 {
+        width: 100%;
+        grid-area: 'b1';
+        font-size: 35px;
+    }
+
+    .titulo .div3 .a3 i {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 480px) {}
