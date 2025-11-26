@@ -17,7 +17,8 @@
 }
 
 :root {
-    --bg-primary: #664d3d;
+    --bg-primary: #503e32;
+    --bg-secundary: #67371a;
 }
 
 .header {
@@ -93,16 +94,19 @@
     gap: 1.5rem;
 }
 
-.nav ul li {
+.nav ul a{
+    padding: 2% 3%;
+    border: solid 2px transparent;
+    border-radius: 5px;
     margin-left: 30px;
-}
-
-.nav ul li a {
     transition: 0.4s;
+    color: #000;
+    text-align: center;
 }
 
-.nav ul li a:hover {
-    color: var(--bg-primary);
+.nav ul a:hover{
+    color: var(--bg-secundary);
+    border: solid 2px var(--bg-secundary);
 }
 
 li a {
