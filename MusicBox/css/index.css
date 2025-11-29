@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+@font-face {
+    font-family: 'Akira';
+    src: url('/MusicBox/fonts/Akira\ Expanded\ Demo.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Quicksand';
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #100E09;
+    padding: 0 4%;
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    height: 80px;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(16, 14, 9, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 0 4%;
+    align-items: center;
+}
+
+.nav-1 {
+    display: flex;
+    align-items: center;
+}
+
+.nav-1 a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.nav-1 i {
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+.nav-1 p {
+    font-family: 'Akira';
+    font-size: 20px;
+}
+
+.nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-center ul {
+    display: flex;
+}
+
+.nav-center a {
+    color: #fff;
+}
+
+.nav-center ul li {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: solid 2px transparent;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+.nav-center ul li:hover {
+    border: solid 2px #fff;
+}
+
+.nav-2 {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.nav-2 a {
+    padding: 10px 25px;
+    border-radius: 50px;
+    color: #fff;
+    border: solid 2px #fff;
+    transition: 0.4s;
+}
+
+.nav-2 a:hover {
+    background-color: #fff;
+    color: #100E09;
+    border: solid 2px transparent;
+}
+
+.artist-title {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.artist-title video {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    left: 0;
+    top: 0;
+    opacity: 0.1;
+}
+
+.artist-title audio {
+    width: 100%;
+}
+
+.artist-title .content-home {
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    margin-top: 6%;
+}
+
+.artist-title .content-home p {
+    font-family: 'Akira';
+    font-size: clamp(40px, 10vw, 150px);
+    letter-spacing: clamp(2px, 0.5vw, 5px);
+    text-transform: uppercase;
+    background: linear-gradient(to right, #fff, #aaa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    align-items: center;
+    justify-content: center;
+}
+
+.integrantes {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+}
+
+.integrantes>p {
+    font-size: clamp(28px, 4vw, 50px);
+    margin-bottom: clamp(30px, 5vh, 50px);
+    text-transform: uppercase;
+    letter-spacing: clamp(2px, 0.5vw, 5px);
+    background: linear-gradient(to right, #fff, #aaa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.integrantes ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(20px, 2vw, 30px);
+    width: 90%;
+    max-width: 1400px;
+}
+
+.integrantes ul li {
+    flex: 1 1 calc(25% - 30px);
+    min-width: 250px;
+    max-width: 350px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.integrantes ul li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.integrantes ul li img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.integrantes ul li p:nth-of-type(1) {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.integrantes ul li p:nth-of-type(2) {
+    font-size: 0.9em;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.tablaalbum {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tablaalbum>p {
+    font-size: clamp(28px, 4vw, 50px);
+    margin-bottom: clamp(30px, 5vh, 50px);
+    text-transform: uppercase;
+    letter-spacing: clamp(2px, 0.5vw, 5px);
+    background: linear-gradient(to right, #fff, #aaa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tablaalbum table {
+    width: 80%;
+    margin: 50px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-family: 'Quicksand', sans-serif;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid #100E09;
+    color: #fff;
+    font-size: 16px;
+}
+
+.tablaalbum table th,
+.tablaalbum table td {
+    padding: 20px 25px;
+    text-align: left;
+}
+
+.tablaalbum table th {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.tablaalbum table tr {
+    transition: all 0.3s ease;
+}
+
+.tablaalbum table tr:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.01);
+}
+
+.tablaalbum table td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #e0e0e0;
+}
+
+.tablaalbum table tr:last-child td {
+    border-bottom: none;
+}
+
+.tablaalbum table td:nth-child(1) {
+    font-weight: bold;
+    color: #fff;
+}
+
+.tablaalbum table td:nth-child(3) {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.conciertos {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+}
+
+.conciertos>p {
+    font-family: 'Akira';
+    font-size: clamp(28px, 4vw, 50px);
+    margin-bottom: clamp(30px, 5vh, 50px);
+    text-transform: uppercase;
+    letter-spacing: clamp(2px, 0.5vw, 5px);
+    background: linear-gradient(to right, #fff, #aaa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.conciertos .imagenes {
+    width: 90%;
+    max-width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(20px, 2vw, 30px);
+}
+
+.conciertos .imagenes>div {
+    flex: 1 1 calc(50% - 30px);
+    min-width: 300px;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conciertos .imagenes>div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.conciertos .imagenes img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.conciertos .imagenes p {
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: bold;
+}
+
+.videos {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(20px, 2vw, 30px);
+    padding: clamp(50px, 10vh, 100px) 4%;
+}
+
+.videos>p {
+    flex: 1 1 100%;
+    font-size: clamp(28px, 4vw, 50px);
+    margin-bottom: clamp(20px, 3vh, 30px);
+    text-transform: uppercase;
+    letter-spacing: clamp(2px, 0.5vw, 5px);
+    background: linear-gradient(to right, #fff, #aaa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.videos iframe {
+    flex: 1 1 calc(33.333% - 30px);
+    min-width: 300px;
+    max-width: 560px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.videos iframe:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.ubicacion {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+}
+
+.ubicacion>p {
+    font-size: clamp(28px, 4vw, 50px);
+    margin-bottom: clamp(30px, 5vh, 50px);
+    text-transform: uppercase;
+    letter-spacing: clamp(2px, 0.5vw, 5px);
+    background: linear-gradient(to right, #fff, #aaa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ubicacion iframe {
+    width: clamp(300px, 80%, 1200px);
+    height: clamp(300px, 50vh, 500px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    filter: invert(90%) hue-rotate(180deg);
+}
