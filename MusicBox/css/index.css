@@ -210,6 +210,68 @@ body {
     line-height: 1.5;
 }
 
+/* Instrumentos - lista responsiva con Flexbox */
+.instrumentos {
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(40px, 10vh, 80px) 0;
+}
+
+.instrumentos>p {
+    font-family: 'Akira';
+    font-size: clamp(28px, 5.5vw, 46px);
+    margin-bottom: clamp(24px, 5vh, 40px);
+}
+
+.instrument-list {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(12px, 2vw, 20px);
+    justify-content: center;
+}
+
+.instrument-card {
+    flex: 1 1 clamp(180px, 22%, 260px);
+    min-width: clamp(160px, 20%, 200px);
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+    padding: clamp(14px, 2vw, 20px);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.instrument-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.instrument-emoji {
+    font-size: clamp(28px, 6vw, 48px);
+    margin-bottom: 12px;
+}
+
+.instrument-card h4 {
+    font-size: clamp(14px, 1.4vw, 18px);
+    margin-bottom: 8px;
+}
+
+.instrument-card p {
+    font-size: clamp(12px, 1.2vw, 14px);
+    color: #e0e0e0;
+    line-height: 1.4;
+}
+
 .tablaalbum {
     width: 100%;
     min-height: 100vh;
