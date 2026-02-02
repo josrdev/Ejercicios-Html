@@ -3,42 +3,559 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Repositori d'exercicis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolis - Joseph Fuentes</title>
+    <link rel="icon" href="img/foto-personal.jpg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/index.css">
+    <meta autor="Joseph Fuentes" />
+    <meta name="description" content="Portafolis de Joseph Fuentes" />
+    <meta name="keywords" content="HTML, CSS, Bootstrap, JavaScript, DAM, web, software" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+    * {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    h1 {
+        font-size: 4.5vw;
+    }
+
+    .hero {
+        background-color: #f5f6f7;
+        min-height: 600px;
+        padding-top: 80px;
+    }
+
+    .hero h2 {
+        font-size: 2.3vw;
+        color: #615151;
+    }
+
+    .hero-imatge-developer {
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+        border-radius: 50%;
+    }
+
+    .hero-inferior img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .dark-section {
+        color: white;
+        background-color: #a4c3b2;
+    }
+
+    .about-me {
+        min-height: 500px;
+        padding: 10px;
+    }
+
+    .about-me>div {
+        max-width: 600px;
+    }
+
+    .section-title {
+        font-size: 2.5vw;
+        padding: 5px 0;
+    }
+
+    .white-section {
+        color: black;
+        background-color: white;
+    }
+
+    .experiencia i {
+        font-size: clamp(14px, 2vw, 50px);
+        color: #7ade30;
+        background-color: #0a0a23;
+        padding: 8px 19px;
+        border-radius: 50%;
+    }
+
+    .experiencia-title {
+        font-size: clamp(14px, 2.5vw, 50px);
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    .experiencia-icon {
+        font-size: 3rem;
+        margin-bottom: 15px;
+        color: #6aa183;
+    }
+
+    .badges-contenedor {
+        font-size: clamp(12px, 1.3vw, 50px);
+        font-weight: bold;
+    }
+
+    .badge {
+        margin: 5px,
+    }
+
+    .columna {
+        margin-bottom: 10px;
+        padding: 20px;
+        border: 1px solid #8080804d;
+        transition: all 0.3s ease-in;
+    }
+
+    .columna:hover {
+        color: #000;
+        background-color: #daffeb;
+        border: 1px solid #7ade30;
+    }
+
+    .section-title {
+        font-size: clamp(14px, 2.5vw, 50px);
+        padding: 5px 0;
+    }
+
+
+    .black-text {
+        color: black;
+    }
+
+    .section-description {
+        font-size: clamp(14px, 2vw, 50px);
+        color: #584343;
+    }
+
+    .projectes {
+        padding: 100px 40px;
+    }
+
+    .projectes img {
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    .projectes-container {
+        padding-top: 60px;
+        margin-bottom: 40px;
+    }
+
+    .overlay {
+        transition: all 0.3s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .overlay p {
+        font-size: clamp(14px, 2.5vw, 30px);
+        margin-bottom: 0;
+    }
+
+    .projecte {
+        position: relative;
+        border: solid 1px #8080804d;
+    }
+
+    .projecte:hover img {
+        opacity: 0.2;
+    }
+
+    .projecte:hover .overlay {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .overlay .icones-contenidor {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .overlay i {
+        color: black;
+        font-size: 60px;
+        margin: 10px;
+    }
+
+    footer {
+        min-height: 500px;
+    }
+
+    .footer-logo {
+        height: 80px;
+        width: 80px;
+        margin: 10px;
+        border-radius: 50%;
+    }
+
+    .footer-text {
+        padding: 20px;
+        margin-bottom: 30px;
+        font-size: clamp(14px, 2.5vw, 50px);
+    }
+
+    .social-icons a {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2px;
+        margin: 10px;
+        border: 2px solid white;
+        border-radius: 50%;
+        transition: all 0.2s ease-in;
+    }
+
+    .social-icons i {
+        color: white;
+        font-size: 1.5rem;
+        transition: all 0.2s ease-in;
+    }
+
+    .social-icons a:hover {
+        background-color: white;
+        border: 2px solid #7ade30;
+    }
+
+    .social-icons a:hover i {
+        color: black;
+    }
+
+    .drets {
+        font-size: 15px;
+        color: #f2f2f2;
+        padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2rem;
+        }
+
+        .hero {
+            min-height: 400px;
+            padding-top: 60px;
+        }
+
+        .hero h2 {
+            font-size: 1.3rem;
+        }
+
+        .hero-imatge-developer {
+            width: 150px;
+            height: 150px;
+        }
+
+        .hero-inferior img {
+            width: 80%;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+        }
+
+        .experiencia-title {
+            font-size: 1.3rem;
+        }
+
+        .about-me {
+            min-height: auto;
+            padding: 20px 15px;
+        }
+
+        .about-me>div {
+            max-width: 100%;
+        }
+
+        .btn-responive {
+            font-size: 11px;
+            padding: 6px 12px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        .hero {
+            min-height: 300px;
+            padding-top: 60px;
+        }
+
+        .hero h2 {
+            font-size: 1rem;
+        }
+
+        .hero-imatge-developer {
+            width: 120px;
+            height: 120px;
+            margin: 15px;
+        }
+
+        .hero-inferior img {
+            width: 100%;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+        }
+
+        .experiencia-title {
+            font-size: 1.1rem;
+        }
+
+        .experiencia-icon {
+            font-size: 2rem;
+        }
+
+        .about-me {
+            min-height: auto;
+            padding: 15px 10px;
+        }
+
+        .btn-responive {
+            font-size: 10px;
+            padding: 5px 10px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .navbar-brand {
+            display: none;
+        }
+    }
+</style>
+
 <body class="body">
-    <video class="video" src="/video/fondo.mp4" autoplay muted loop></video>
-    <div class="titulo">
-        <div class="div1">
-            <i class='bx bx-book-open'></i>
-            <p>README</p>
+    <nav class="navbar fixed-top navbar-expand-lg" data-bs-theme="light" style="background-color: #f5f6f7;">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <a class="navbar-brand" href="#">
+                    <img src="img/foto-personal.jpg" alt="icono" width="50"
+                        style="border-radius: 50%; width: 50px; height: 50px;" />
+                </a>
+                <ul class="navbar-nav d-flex justify-content-center align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#about-me">Quant a mi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#web-design">Disseny web</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projectes-video">Projectes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacte</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="div2">
-            <p>Repositori d'exercicis</p>
+    </nav>
+
+    <section class="hero d-flex flex-column justify-content-center align-items-center w-100">
+        <div class="text-center">
+            <img class="hero-imatge-developer" src="img/foto-personal.jpg" alt="foto personal" />
+            <h1>Joseph Fuentes</h1>
+            <h2>Desenvolupador d'aplicacions <br>multiplataforma</h2>
         </div>
-        <div class="div3">
-            <a href="/EjercicioTienda/index.html" target="_blank">
-                <div class="a1">
-                    <i class='bx bx-store-alt'></i>
-                    <p>PT1_My_Store</p>
-                </div>
-            </a>
-            <a href="/EjercicioMusicBox/index.html" target="_blank">
-                <div class="a2">
-                    <i class='bx bxl-deezer'></i>
-                    <p>PT2_Music_Box</p>
-                </div>
-            </a>
-            <a href="/EjercicioPinturas/index.html" target="_blank">
-                <div class="a3">
-                    <i class='bx bx-palette'></i>
-                    <p>PT3_Grans_Pintors</p>
-                </div>
+        <div class="hero-inferior text-center">
+            <img class="img-fluid" src="img/image-home.png" alt="imatge ordinador i llenguatges" />
+        </div>
+    </section>
+
+    <section class="about-me dark-section d-flex flex-column justify-content-center align-items-center" id="about-me">
+        <div class="text-center">
+            <h2 class="section-title">Saber més sobre mi</h2>
+            <p class="section-text text-center">Sóc un programador i dissenyador gràfic apassionat amb un compromís
+                indestructible amb la creativitat i l'expressió visual. El meu enfocament és transformar conceptes en
+                dissenys impactants que expliquen històries, transmeten emocions i deixen una impressió duradora.</p>
+        </div>
+
+        <div class="text-center">
+            <a href="/pdf/CV - Joseph Fuentes.pdf" download class="btn btn-primary btn-lg btn-responive"
+                style="background-color: #6aa183; border-color: transparent;">
+                📄 Descarregar CV
             </a>
         </div>
-    </div>
+    </section>
+
+    <section class="white-section py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="columna col-12 col-md-4">
+                    <div class="text-center">
+                        <i class="bi bi-filetype-html experiencia-icon"></i>
+                        <h3 class="experiencia-title">Desenvolupament web</h3>
+                        <p class="text-center">Disseny i creació de llocs web moderns, adaptables a tots els dispositius
+                            i optimitzats per a una experiència d'usuari intuïtiva i ràpida.</p>
+                    </div>
+                    <div class="badges-contenedor text-center">
+                        <span class="badge rounded-pill bg-success">Html</span>
+                        <span class="badge rounded-pill bg-success">CSS</span>
+                        <span class="badge rounded-pill bg-success">JavaScript</span>
+                        <span class="badge rounded-pill bg-success">Bootstrap</span>
+                        <span class="badge rounded-pill bg-success">VUE</span>
+                    </div>
+                </div>
+
+                <div class="columna col-12 col-md-4">
+                    <div class="text-center">
+                        <i class="bi bi-filetype-java experiencia-icon"></i>
+                        <h3 class="experiencia-title">Java</h3>
+                        <p class="text-center"><br><br>Programació d'aplicacions robustes i escalables. Ús d'entorns
+                            professionals per al desenvolupament de programari segur i eficient.</p>
+                        <div class="badges-contenedor text-center">
+                            <span class="badge rounded-pill bg-success">Eclipse</span>
+                            <span class="badge rounded-pill bg-success">Javadoc</span>
+                            <span class="badge rounded-pill bg-success">JDK</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="columna col-12 col-md-4">
+                    <div class="text-center">
+                        <i class="bi bi-cpu experiencia-icon"></i>
+                        <h3 class="experiencia-title">S.O.</h3>
+                        <p class="text-center"><br><br>Gestió i configuració d'entorns Windows i Linux. Administració de
+                            servidors i automatització de tasques mitjançant scripts de consola.</p>
+                        <div class="badges-contenedor text-center">
+                            <span class="badge rounded-pill bg-success">Windows</span>
+                            <span class="badge rounded-pill bg-success">Linux</span>
+                            <span class="badge rounded-pill bg-success">Servers</span>
+                            <span class="badge rounded-pill bg-success">Bash</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projectes white-section d-flex flex-column text-center" id="web-design">
+        <h2 class="section-title black-text">Disseny Web</h2>
+        <h3 class="section-description">Alguns projectes web desenvolupats al cicle DAM </h3>
+        <div class="container text-center projectes-container">
+            <div class="row">
+                <div class="projecte col-12 col-md-6 col-lg-4">
+                    <img src="/img/my-store.png" alt="projecte 1" />
+                    <div class="overlay">
+                        <p>My Store</p>
+                        <div class="icones-contenidor">
+                            <a href="/EjercicioTienda/index.html" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-bag"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projecte col-12 col-md-6 col-lg-4">
+                    <img src="/img/music-box.png" alt="projecte 2" />
+                    <div class="overlay">
+                        <p>Music Box</p>
+                        <div class="icones-contenidor">
+                            <a href="/EjercicioMusicBox/index.html" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-music-player"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projecte col-12 col-md-6 col-lg-4">
+                    <img src="/img/great-painters.png" alt="projecte 3" />
+                    <div class="overlay">
+                        <p>Great painters</p>
+                        <div class="icones-contenidor">
+                            <a href="/EjercicioPinturas/index.html" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-palette"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projectes-video" class="projectes white-section d-flex flex-column text-center">
+        <h2 class="section-title black-text">Desenvolupament d'Aplicacions</h2>
+        <h3 class="section-description">Algunes aplicacions desenvolupades al cicle DAM </h3>
+        <div class="container text-center projectes-container">
+            <div class="row">
+                <div class="projecte col-12 col-md-6 col-lg-4">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/9_9e7hlwisI?si=tUVx3SQMB7YNS5v8"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <h2>El meu projecte 1</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic animi deleniti quae! </p>
+                </div>
+                <div class="projecte col-12 col-md-6 col-lg-4">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/9_9e7hlwisI?si=tUVx3SQMB7YNS5v8"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <h2>El meu projecte 1</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic animi deleniti quae! </p>
+                </div>
+                <div class="projecte col-12 col-md-6 col-lg-4">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/9_9e7hlwisI?si=tUVx3SQMB7YNS5v8"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <h2>El meu projecte 1</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic animi deleniti quae! </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="dark-section d-flex flex-column align-items-center justify-content-center" id="contact">
+        <img class="footer-logo" src="/img/foto-personal.jpg" alt="logo" />
+        <p class="footer-text text-center">Contacta'm</p>
+        <div class="social-icons d-flex flex-wrap align-items-center justify-content-center">
+            <a href="mailto:joseph28122@gmail.com" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://www.github.com/" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-github"></i>
+            </a>
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-twitter"></i>
+            </a>
+        </div>
+        <div class="drets">Creat per Joseph Fuentes (2026) &#169;</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>
