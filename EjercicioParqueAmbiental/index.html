@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/es.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/EjercicioParqueAmbiental/css/index.css">
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <title>Parc ambiental</title>
+</head>
+
+<body>
+    <header class="header">
+        <p>Parc ambiental <span style="margin-left: 2px;">by</span></p>
+        <img src="/EjercicioParqueAmbiental/img/foto-personal.jpg" alt="icon-creador">
+        <p style="margin-left: 10px;">Joseph • Fuentes<sup>pro</sup></p>
+    </header>
+    <div class="content-nav">
+        <nav class="nav">
+            <ul>
+                <a href="#inicio">
+                    <li class="inici">Inici</li>
+                </a>
+                <a href="#descripcion">
+                    <li>Més informació</li>
+                </a>
+                <a href="#instalaciones">
+                    <li>Instal·lacions</li>
+                </a>
+                <a href="#video">
+                    <li>L'abocador</li>
+                </a>
+                <a href="#galeria">
+                    <li>Galeria</li>
+                </a>
+                <a href="#agraiments">
+                    <li>Agraïments</li>
+                </a>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="home" id="inicio">
+        <div class="home-content">
+            <p id="fecha"></p>
+            <h1>Parc <span style="color: #50a84e;">Ambiental</span></h1>
+        </div>
+    </section>
+
+    <section class="descripcion" id="descripcion">
+        <div class="content-description">
+            <div class="text">
+                <p style="color: #50a84e; font-weight: bold;">Sobre el parc</p>
+                <h1>Gestió Sostenible i Respecte Ambiental</h1>
+                <p>El Parc Ambiental de Bufalvent es propiedad del Consorci del Bages para la gestión de residuos, una
+                    entidad pública que gestiona los residuos municipales del Bages y parte del Moianès.</p>
+                <p>Situat al terme municipal de Manresa, el tractament de residus conviu amb un entorn ple d'oliverars,
+                    barraques de vinya, boscos i animals que pasturen lliurement. El respecte pel territori i el medi
+                    ambient es fa evident en aquest espai únic.</p>
+
+                <div class="buttons">
+                    <button class="btn" type="button" aria-label="100 por ciento sostenible">
+                        <i class='bx bx-leaf'></i>
+                        <span>100% Sostenible</span>
+                    </button>
+                    <button class="btn" type="button" aria-label="Energia renovable">
+                        <i class='bx bx-sun'></i>
+                        <span>Energía Renovable</span>
+                    </button>
+                </div>
+            </div>
+            <img src="https://www.consorcidelbages.cat/wp-content/uploads/2023/11/parc_ambiental.jpg"
+                alt="Parc ambiental">
+        </div>
+    </section>
+
+    <section class="instalaciones" id="instalaciones">
+        <h1 style="text-align: center; font-size: 40px;">Algunes instal·lacions</h1>
+        <div class="content-instalaciones">
+            <div class="tarjeta">
+                <div class="tarjeta-img">
+                    <a-scene embedded>
+                        <a-assets>
+                            <img id="panorama" src="/EjercicioParqueAmbiental/img/7_1plantacompostatge.jpg">
+                        </a-assets>
+                        <a-sky src="#panorama" rotation="0 -90 0"></a-sky>
+                        <a-entity camera look-controls position="0 1.6 0"></a-entity>
+
+                    </a-scene>
+                </div>
+                <div class="tarjeta-text">
+                    <h1>Planta de compostatge</h1>
+                    <p>Les restes d’orgànica que separes a casa es recull separadament a partir del contenidor marró o
+                        el cubell del porta a porta corresponent. El Consorci del Bages s’encarrega de gestionar aquesta
+                        recollida selectiva i portar-la a la planta de compostatge del Parc ambiental de Bufalvent.</p>
+                    <div class="tag-row">
+                        <span class="tag">Compostatge</span>
+                    </div>
+                </div>
+            </div>
+            <div class="tarjeta">
+                <div class="tarjeta-img">
+                    <a-scene embedded>
+                        <a-assets>
+                            <img id="panorama2" src="/EjercicioParqueAmbiental/img/6_parcsolar.jpg">
+                        </a-assets>
+                        <a-sky src="#panorama2" rotation="0 -90 0"></a-sky>
+                        <a-entity camera look-controls position="0 1.6 0"></a-entity>
+
+                    </a-scene>
+                </div>
+                <div class="tarjeta-text">
+                    <h1>Parc solar</h1>
+                    <p>Al Parc ambiental de Bufalvent disposem de 16 panells de generació fotovoltaica, en una
+                        superfície de 3.000 quadrats. Generem 150.000 KW cada any, que seria equivalent al consum
+                        energètic d’unes 300 persones.</p>
+                    <div class="tag-row">
+                        <span class="tag">Transferència</span>
+                    </div>
+                </div>
+            </div>
+            <div class="tarjeta">
+                <div class="tarjeta-img">
+                    <a-scene embedded>
+                        <a-assets>
+                            <img id="panorama3" src="/EjercicioParqueAmbiental/img/4_motorbiogas.jpg">
+                        </a-assets>
+                        <a-sky src="#panorama3" rotation="0 -90 0"></a-sky>
+                        <a-entity camera look-controls position="0 1.6 0"></a-entity>
+
+                    </a-scene>
+                </div>
+                <div class="tarjeta-text">
+                    <h1>Motor de biogàs</h1>
+                    <p>Per minimitzar l’impacte de l’abocador, aprofitem el biogàs que genera la descomposició de la
+                        fracció orgànica que arriba al dipòsit per convertir-la en energia. Amb aquesta instal·lació
+                        generem equivalent al consum de 1.000 llars, és a dir un municipi de la mida d’Avinyó,
+                        aproximadament.</p>
+                    <div class="tag-row">
+                        <span class="tag">Biogàs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video" id="video">
+        <div class="content-video">
+            <div class="text">
+                <p style="color: #50a84e; font-weight: bold;">L'Abocador</p>
+                <h1>Gestio de Residus Solids</h1>
+                <p>
+                    La fracció resta o rebuig que ens arriba al Parc ambiental de Bufalvent va al dipòsit (conegut
+                    popularment com a abocador) i allà els residus s’aixafen, es compacten i s’enterren. Aquests
+                    materials acaben la seva vida útil al dipòsit i no es poden reciclar ni valoritzar. Quan la fase que
+                    està oberta al dipòsit està plena, s’obre una nova zona per enterrar els residus, i l’antiga queda
+                    clausurada i es restaura, plantant-hi vegetació per aconseguir el mínim impacte ambiental i
+                    paisatgístic.</p>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/fjuab5fJ0lY?si=KIc84hMYQtebnmHp"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="galeria" id="galeria">
+        <div class="galeria-header">
+            <p style="color: #50a84e; font-weight: bold;">Visió del Futur</p>
+            <h1>Sostenibilitat en Acció</h1>
+            <p>Descobreix les imatges que representen el nostre compromís amb el medi ambient i la gestió sostenible dels recursos.</p>
+        </div>
+        <div class="galeria-grid">
+            <div class="galeria-item">
+                <img src="https://heura.net/wp-content/uploads/2020/04/Heura-gestion-de-residuos.jpg" alt="Gestión de Residuos">
+                <div class="galeria-overlay">
+                    <span class="galeria-tag">Gestió de Residus</span>
+                </div>
+            </div>
+            <div class="galeria-item">
+                <img src="https://limpiezademalaga.es/wp-content/uploads/2023/09/Diseno-sin-titulo.jpg" alt="Composting y naturaleza">
+                <div class="galeria-overlay">
+                    <span class="galeria-tag">Compostatge</span>
+                </div>
+            </div>
+            <div class="galeria-item">
+                <img src="https://solfy.net/wp-content/uploads/2023/12/ventajas-y-desventajas-de-los-paneles-1.jpg" alt="Energía Solar">
+                <div class="galeria-overlay">
+                    <span class="galeria-tag">Panells Solars</span>
+                </div>
+            </div>
+            <div class="galeria-item">
+                <img src="https://gruyserecoadeso.com/wp-content/uploads/2024/09/La-importancia-del-reciclaje-en-la-sociedad-1024x637.jpg" alt="Recuperación y reciclaje">
+                <div class="galeria-overlay">
+                    <span class="galeria-tag">Reciclatge</span>
+                </div>
+            </div>
+            <div class="galeria-item">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="Conservación ambiental">
+                <div class="galeria-overlay">
+                    <span class="galeria-tag">Biodiversitat</span>
+                </div>
+            </div>
+            <div class="galeria-item">
+                <img src="https://www.factorenergia.com/wp-content/uploads/2018/08/energias-renovables.jpg" alt="Energía renovable del parque">
+                <div class="galeria-overlay">
+                    <span class="galeria-tag">Energies Renovables</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="agraiments" id="agraiments">
+        <div class="agraiments-header">
+            <p style="color: #50a84e; font-weight: bold;">Fonts d'Informació</p>
+            <h1>Agraïments i Crèdits</h1>
+            <p>Agraïm als següents portals i institucions que han proporcionat informació vàlida i actualitzada sobre el Parc Ambiental de Bufalvent i la gestió sostenible de residus.</p>
+        </div>
+
+        <div class="agraiments-grid">
+            <div class="agraiments-card">
+                <div class="agraiments-card-img">
+                    <img src="https://www.consorcidelbages.cat/wp-content/uploads/2023/11/parc_ambiental.jpg" alt="Consorci del Bages">
+                    <div class="agraiments-overlay">
+                        <a href="https://www.consorcidelbages.cat" target="_blank" rel="noopener noreferrer" class="agraiments-btn">
+                            Visita el lloc
+                            <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="agraiments-info">
+                    <h3>Consorci del Bages</h3>
+                    <p>Fonte principal d'informació sobre la gestió de residus, el Parc Solar, la Planta de Compostatge i el Motor de Biogàs del Parc Ambiental de Bufalvent.</p>
+                    <span class="agraiments-tag">consorcidelbages.cat</span>
+                </div>
+            </div>
+
+            <div class="agraiments-card">
+                <div class="agraiments-card-img">
+                    <img src="https://attac.es/wp-content/uploads/2021/12/Wiki_wiki_wiki_wiki_logo.jpg" alt="Wikipedia">
+                    <div class="agraiments-overlay">
+                        <a href="https://ca.wikipedia.org/wiki/Gestió_de_residus" target="_blank" rel="noopener noreferrer" class="agraiments-btn">
+                            Visita el lloc
+                            <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="agraiments-info">
+                    <h3>Wikipedia - Gestió de Residus</h3>
+                    <p>Informació completa i actualitzada sobre tècniques de gestió sostenible de residus, compostatge, reciclatge i energies renovables.</p>
+                    <span class="agraiments-tag">wikipedia.org</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-brand">
+                    <h3>Parc Ambiental</h3>
+                    <p>Consorci del Bages</p>
+                </div>
+                <p class="footer-description">Gestió sostenible i respecte ambiental. Comprometidos con la protección del medio ambiente y la gestión responsable de recursos.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Enllaços Ràpids</h4>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Inici</a></li>
+                    <li><a href="#descripcion">Més Informació</a></li>
+                    <li><a href="#instalaciones">Instal·lacions</a></li>
+                    <li><a href="#video">L'Abocador</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Instal·lacions</h4>
+                <ul class="footer-links">
+                    <li><a href="#instalaciones">Planta de Compostatge</a></li>
+                    <li><a href="#instalaciones">Parc Solar</a></li>
+                    <li><a href="#instalaciones">Motor de Biogàs</a></li>
+                    <li><a href="#video">Dipòsit de Residus</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contacte</h4>
+                <div class="footer-contact">
+                    <p><i class='bx bx-phone'></i> (+34) 93 XXX XXX</p>
+                    <p><i class='bx bx-envelope'></i> info@parc-ambiental.cat</p>
+                    <p><i class='bx bx-map'></i> Bufalvent, Manresa</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+                    <a href="#" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
+                    <a href="#" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-divider"></div>
+            <p>&copy; 2026 Parc Ambiental de Bufalvent. Tots els drets reservats. | Dissenyat per Joseph Fuentes<sup>pro</sup></p>
+        </div>
+    </footer>
+
+    <script>
+        dayjs.locale('es');
+
+        const fechaFormateada = dayjs().format('MMMM DD, YYYY');
+
+        document.getElementById('fecha').textContent =
+            fechaFormateada.charAt(0).toUpperCase() + fechaFormateada.slice(1);
+    </script>
+</body>
+
+</html>
