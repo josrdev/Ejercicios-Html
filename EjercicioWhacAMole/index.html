@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Whac-A-Mole</title>
+</head>
+
+<body>
+    <main class="game">
+        <section class="game__board">
+            <aside class="game__sidebar">
+                <header class="game__header">
+                    <h1 class="game__title">Whac-A-Mole</h1>
+                    <p class="game__subtitle">Haz clic en los topos antes de que desaparezcan.</p>
+                    <div class="game__controls">
+                        <button id="playBtn" class="button" type="button">Jugar</button>
+
+                        <div class="timer" aria-label="Temporizador restante">
+                            <span class="timer__label">Tiempo</span>
+                            <span class="timer__value" id="timer">30</span>
+                            <span class="timer__unit">s</span>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="scoreboard" aria-label="Contador de puntuación">
+                    <span class="scoreboard__label" style="color: #000;">Puntos</span>
+                    <div class="contador" id="contador">0</div>
+                </div>
+            </aside>
+
+            <div class="tablero" aria-label="Tablero de juego">
+                <img src="resources/topoNo.png" draggable="false" class="celda" alt="Celda 1" id="celda-1">
+                <img src="resources/topoNo.png" draggable="false" class="celda" alt="Celda 2" id="celda-2">
+                <img src="resources/topoNo.png" draggable="false" class="celda" alt="Celda 3" id="celda-3">
+                <img src="resources/topoNo.png" draggable="false" class="celda" alt="Celda 4" id="celda-4">
+                <img src="resources/topoNo.png" draggable="false" class="celda" alt="Celda 5" id="celda-5">
+                <img src="resources/topoNo.png" draggable="false" class="celda" alt="Celda 6" id="celda-6">
+                <img src="resources/topoNo.png" draggable="false" class="celda" alt="Celda 7" id="celda-7">
+                <img src="resources/topoNo.png" draggable="false" class="celda" alt="Celda 8" id="celda-8">
+                <img src="resources/topoNo.png" draggable="false" class="celda" alt="Celda 9" id="celda-9">
+            </div>
+        </section>
+    </main>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
