@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <title>PokeApi - Search</title>
+    </head>
+    <body>
+        <div class="content">
+            <div class="nav">
+                <div class="nav-left">
+                    <div class="user"></div>
+                    <form class="search-box" id="search-form">
+                        <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <input type="search" placeholder="Busca por nombre o id" id="buscador">
+                    </form>
+                </div>
+                <div class="nav-right">
+                    <div class="status-bar-ios">
+                        <div id="reloj-ios"
+                            class="status-element text-element">--:--</div>
+
+                        <div class="status-element battery-container-ios">
+                            <div class="battery-body-ios">
+                                <div id="battery-fill-ios"
+                                    class="battery-fill-ios"></div>
+                            </div>
+                            <div class="battery-cap-ios"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-wrapper">
+                <button id="prev-btn" class="nav-arrow left-arrow" aria-label="Anterior">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="content-pok"></div>
+                <button id="next-btn" class="nav-arrow right-arrow" aria-label="Siguiente">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <nav>
+            <ul id="gen-nav">
+                <li class="gen-btn active" data-gen="1" title="Generación 1"><i class="fa-solid fa-egg"></i></li>
+                <li class="gen-btn" data-gen="2" title="Generación 2"><i class="fa-solid fa-leaf"></i></li>
+                <li class="gen-btn" data-gen="3" title="Generación 3"><i class="fa-solid fa-water"></i></li>
+                <li class="gen-btn" data-gen="4" title="Generación 4"><i class="fa-solid fa-mountain"></i></li>
+                <li class="gen-btn" data-gen="5" title="Generación 5"><i class="fa-solid fa-city"></i></li>
+                <li class="gen-btn" data-gen="6" title="Generación 6"><i class="fa-solid fa-dna"></i></li>
+                <li class="gen-btn" data-gen="7" title="Generación 7"><i class="fa-solid fa-sun"></i></li>
+                <li class="gen-btn" data-gen="8" title="Generación 8"><i class="fa-solid fa-shield-halved"></i></li>
+                <li class="gen-btn" data-gen="9" title="Generación 9"><i class="fa-solid fa-gem"></i></li>
+            </ul>
+        </nav>
+        <script src="js/relojybateria.js"></script>
+        <script src="js/index.js" defer></script>
+    </body>
+</html>
