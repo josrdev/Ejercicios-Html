@@ -46,7 +46,7 @@ body {
     height: 50px;
     background-color: rgb(52, 52, 52);
     border-radius: 50%;
-    background-image: url('../img/perfil.gif');
+    background-image: url('/EjercicioPokeApi/img/perfil.gif');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
